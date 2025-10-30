@@ -18,6 +18,7 @@ void affiche_grille(char grille[9]) {
 	printf("          1  |2  |3  \n");
 	printf("           %c | %c | %c\n", grille[0], grille[1], grille[2]);
 	printf("             |   |   \n");
+	printf("\n");
 }
 
 bool est_gagne(char grille[9], char symbole) {
