@@ -65,25 +65,20 @@ int main() {
 		int case_jouee;
 		affiche_grille(grille);
 		/*
-		Tour du joueur 1
+		Gestion du tour en fonction du joueur
 		*/
-		if (tour % 2 == 1) {
-			do {
-				printf("Joueur 1, ou voulez-vous jouer ? (cases de 1 a 9)\n");
-				scanf("%d", &case_jouee);
-			} while (grille[case_jouee - 1] != ' ');
-			grille[case_jouee - 1] = 'X';
+		int joueur = 1;
+		char joue = 'X';
+
+		if (tour % 2 == 0) {
+			joueur = 2;
+			joue = 'O';
 		}
-		/*
-		Tour du joueur 2
-		*/
-		else {
-			do {
-				printf("Joueur 2, ou voulez-vous jouer ? (cases de 1 a 9)\n");
-				scanf("%d", &case_jouee);
-			} while (grille[case_jouee - 1] != ' ');
-			grille[case_jouee - 1] = 'O';
-		}
+		do {
+			printf("Joueur %d, ou voulez-vous jouer ? (cases en fonction du pave numerique)\n", joueur);
+			scanf("%d", &case_jouee);
+		} while (grille[case_jouee - 1] != ' ');
+		grille[case_jouee - 1] = joue;
 		system("cls");
 	}
 	affiche_grille(grille);
