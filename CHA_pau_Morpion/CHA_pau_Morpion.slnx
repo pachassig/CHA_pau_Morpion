@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="CHA_pau_Morpion.vcxproj" />
+  <Project Path="CHA_pau_Morpion.vcxproj" Id="50500419-0b07-47a2-8c74-d0113dce2ab9" />
 </Solution>
